@@ -1,4 +1,6 @@
 <script lang="ts">
+  import EH1 from "$lib/text/EH1.svelte";
+  import EP from "$lib/text/EP.svelte";
   interface Props {
     title?: string;
     subtitle?: string;
@@ -14,13 +16,13 @@
     <div class="pb-4">
       <div class="flex flex-row items-center gap-4">
         {#if title}
-          <h1>{title}</h1>
+          <EH1>{title}</EH1>
         {/if}
       </div>
       {#if subtitle}
-        <p class="text-muted">{subtitle}</p>
+        <EP>{subtitle}</EP>
       {/if}
     </div>
   {/if}
-  {@render children?.()}@
+  {@render children?.()}
 </div>
