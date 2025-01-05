@@ -21,13 +21,12 @@ Inspired by Svelte magic. A free and open source Tailwind based component librar
 1.Install the package (`npm install @kerosenelabs/eureka`)
 
 2. Add the CSS to your `app.css`
+
 ```css
 import "@kerosenelabs/eureka/components.css"
 ```
 
 3. Import components, start making cool things! There's examples in this repositories `+page.svelte` and `+layout.svelte`.
-
-
 
 ## License
 

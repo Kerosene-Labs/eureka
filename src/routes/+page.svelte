@@ -2,8 +2,14 @@
   import EButton from "$lib/button/EButton.svelte";
   import ECard from "$lib/container/ECard.svelte";
   import EModal from "$lib/container/EModal.svelte";
+  import EDateInput from "$lib/input/EDateInput.svelte";
+  import ENumberInput from "$lib/input/ENumberInput.svelte";
+  import ETextInput from "$lib/input/ETextInput.svelte";
 
   let modalVisible: boolean = false;
+  let amount: number;
+  let description: string;
+  let date: Date;
 </script>
 
 <EModal
@@ -23,5 +29,13 @@
       <EButton type="danger">Big Red Button</EButton>
     </div>
   </ECard>
-  <ECard></ECard>
+  <ECard title="Inputs" subtitle="Here's some inputs!">
+    <div class="flex flex-col gap-2">
+      <ENumberInput id="dollars" label="Amount" prefix="$" value={amount}
+      ></ENumberInput>
+      <ETextInput id="description" label="Description" value={description}
+      ></ETextInput>
+      <EDateInput id="date" label="Date" value={date}></EDateInput>
+    </div>
+  </ECard>
 </div>
