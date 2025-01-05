@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { EButton } from "$lib/index.js";
+  import { EButton, EH1, EP } from "$lib/index.js";
   import { cubicOut } from "svelte/easing";
   import { fly, fade } from "svelte/transition";
 
@@ -36,14 +36,16 @@
         }}>
         <div class="flex flex-col">
           {#if title}
-            <h1>{title}</h1>
+            <EH1>{title}</EH1>
           {/if}
           {#if subtitle}
-            <p class="pb-2 font-semibold">{subtitle}</p>
+            <div class="pb-2">
+              <EP>{subtitle}</EP>
+            </div>
           {/if}
         </div>
         <div class="flex flex-col gap-2">
-          {@render children()}
+          {@render children?.()}
           {#if closeButtonVisible}
             <EButton
               onclick={() => {

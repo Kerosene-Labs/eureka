@@ -1,11 +1,11 @@
 {
   "name": "@kerosenelabs/eureka",
-  "version": "1.1.6",
+  "version": "1.1.13",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && npm run package",
     "preview": "vite preview",
-    "package": "svelte-kit sync && svelte-package && publint",
+    "package": "svelte-kit sync && svelte-package && npx tailwindcss -i ./src/app.css -o ./dist/components.css --minify && publint",
     "prepublishOnly": "npm run package",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -16,11 +16,10 @@
   "files": [
     "dist",
     "!dist/**/*.test.*",
-    "!dist/**/*.spec.*"
-  ],
-  "sideEffects": [
+    "!dist/**/*.spec.*",
     "**/*.css"
   ],
+  "sideEffects": [],
   "svelte": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
@@ -28,7 +27,8 @@
     ".": {
       "types": "./dist/index.d.ts",
       "svelte": "./dist/index.js"
-    }
+    },
+    "./components.css": "./dist/components.css"
   },
   "peerDependencies": {
     "svelte": "^5.0.0"

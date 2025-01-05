@@ -8,6 +8,9 @@ export default {
       screens: {
         desktop: "1280px",
       },
+      width: {
+        comfy: "43.75rem",
+      },
     },
   },
 

@@ -6,8 +6,8 @@
     subtitle?: string;
     children?: any;
   }
-  
-  let {title, subtitle, children}: Props = $props();
+
+  let { title, subtitle, children }: Props = $props();
 </script>
 
 <div

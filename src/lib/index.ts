@@ -32,3 +32,10 @@ export { default as ESpinner } from "$lib/ESpinner.svelte";
 
 // helpers
 export { getOrdinal, formatCurrency, isEmpty } from "$lib/valueHelpers.js";
+
+// text
+export { default as EH1 } from "$lib/text/EH1.svelte";
+export { default as EP } from "$lib/text/EP.svelte";
+
+// nav
+export { default as ENav } from "$lib/nav/ENav.svelte";

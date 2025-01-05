@@ -1,7 +1,6 @@
 <script lang="ts">
-    import { EToast } from "$lib/index.js";
-    import { toastQueue } from "./toastControl.js";
-
+  import { EToast } from "$lib/index.js";
+  import { toastQueue } from "./toastControl.js";
 </script>
 
 <div

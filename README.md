@@ -1,14 +1,14 @@
 # Eureka
 
-A free and open source Tailwind based component library for Svelte 5.
+Inspired by Svelte magic. A free and open source Tailwind based component library for Svelte 5.
 
 ## Table of Contents
 
-1. [Features](#features)
-2. [Installation](#installation)
-3. [Contributing](#contributing)
-4. [License](#license)
-5. [Contact](#contact)
+- [Eureka](#eureka)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [License](#license)
 
 ## Features
 
@@ -18,22 +18,17 @@ A free and open source Tailwind based component library for Svelte 5.
 
 ## Installation
 
-`npm install @kerosenelabs/`
+1.Install the package (`npm install @kerosenelabs/eureka`)
 
-## Contributing
+2. Add the CSS to your `app.css`
+```css
+import "@kerosenelabs/eureka/components.css"
+```
 
-As stated above, it is generally discouraged to self-host BillTracker. If you can get it running, more power to you! If
-there is a desire in the future from the community to offer a self-hosted version, we're willing to revisit this concept.
-We do accept pull requests and issues from the community,
+3. Import components, start making cool things! There's examples in this repositories `+page.svelte` and `+layout.svelte`.
 
-## Issues
 
-Our Jira is at https://kerosenelabs.atlassian.net/jira/software/projects/BIL/boards/2
 
 ## License
 
 Please see [LICENSE.md](LICENSE.md).
-
-## Contact
-
-Follow the proper channels on [our website](https://kerosenelabs.com).
