@@ -1,58 +1,39 @@
-# create-svelte
+# Eureka
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+A free and open source Tailwind based component library for Svelte 5.
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
+## Table of Contents
 
-## Creating a project
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Contributing](#contributing)
+4. [License](#license)
+5. [Contact](#contact)
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Features
 
-```bash
-# create a new project in the current directory
-npx sv create
+- Fast and Minimal
+- Modern
+- Easy for normal folks
 
-# create a new project in my-app
-npx sv create my-app
-```
+## Installation
 
-## Developing
+`npm install @kerosenelabs/`
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Contributing
 
-```bash
-npm run dev
+As stated above, it is generally discouraged to self-host BillTracker. If you can get it running, more power to you! If
+there is a desire in the future from the community to offer a self-hosted version, we're willing to revisit this concept.
+We do accept pull requests and issues from the community,
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Issues
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+Our Jira is at https://kerosenelabs.atlassian.net/jira/software/projects/BIL/boards/2
 
-## Building
+## License
 
-To build your library:
+Please see [LICENSE.md](LICENSE.md).
 
-```bash
-npm run package
-```
+## Contact
 
-To create a production version of your showcase app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
+Follow the proper channels on [our website](https://kerosenelabs.com).
