@@ -1,8 +1,8 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { toastQueue, type ToastRequest, ToastType } from "$lib/toast";
   import { cubicIn, cubicInOut, cubicOut } from "svelte/easing";
   import { fly } from "svelte/transition";
+  import { toastQueue, ToastType, type ToastRequest } from "./toastControl.js";
   export let request: ToastRequest;
   export let id: number;
 

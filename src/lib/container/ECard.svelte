@@ -1,6 +1,11 @@
 <script lang="ts">
-  export let title: string | undefined = undefined;
-  export let subtitle: string | undefined = undefined;
+  interface Props {
+    title?: string;
+    subtitle?: string;
+    children?: any;
+  }
+  
+  let {title, subtitle, children}: Props = $props();
 </script>
 
 <div
@@ -17,5 +22,5 @@
       {/if}
     </div>
   {/if}
-  <slot></slot>
+  {@render children()}
 </div>

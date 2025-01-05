@@ -29,6 +29,7 @@
   class:secondary={type === "secondary"}
   class:danger={type === "danger"}>
   <span class="flex flex-row items-center justify-center gap-4">
+    {@render children()}
     {#if spinning}
       <span role="status">
         <svg
