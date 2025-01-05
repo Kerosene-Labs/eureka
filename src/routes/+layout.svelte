@@ -1,7 +1,10 @@
-<script>
+<script lang="ts">
 	import '../app.css';
 
 	let { children } = $props();
+	// console.log(children)
 </script>
 
-{@render children()}
+{#if typeof children === 'function'}
+	{@render children()}
+{/if}
