@@ -14,10 +14,10 @@ export function getOrdinal(num: number): string {
  * @param currency The currency to format as (default: USD)
  */
 export function formatCurrency(num: number, currency: string = "USD"): string {
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
     currency: currency,
-  }).format(num)
+  }).format(num);
 }
 
 /**
