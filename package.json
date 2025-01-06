@@ -12,6 +12,10 @@
     "format": "prettier --write .",
     "lint": "prettier --check ."
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kerosene-Labs/eureka.git"
+  },
   "license": "MIT",
   "files": [
     "dist",
