@@ -5,6 +5,8 @@
   import EDateInput from "$lib/input/EDateInput.svelte";
   import ENumberInput from "$lib/input/ENumberInput.svelte";
   import ETextInput from "$lib/input/ETextInput.svelte";
+  import EColumnContainer from "$lib/layout/EColumnContainer.svelte"
+    import EColumnThenRowContainer from "$lib/layout/EColumnThenRowContainer.svelte";
 
   let modalVisible: boolean = false;
   let amount: number;
@@ -18,29 +20,29 @@
   subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempus id elit id vestibulum. Aliquam."
 ></EModal>
 
-<div class="flex flex-col gap-4">
+<EColumnContainer>
   <ECard
     title="Welcome"
     subtitle="Welcome to Eureka, a free and open source Svelte 5 component library.">
-    <div class="flex flex-col gap-2 desktop:flex-row">
+    <EColumnThenRowContainer>
       <EButton>Test Button</EButton>
       <EButton type="secondary" onclick={() => (modalVisible = !modalVisible)}
         >Modal Demo</EButton>
       <EButton type="danger">Big Red Button</EButton>
-    </div>
+    </EColumnThenRowContainer>
   </ECard>
   <ECard title="Inputs" subtitle="Here's some inputs!">
-    <div class="flex flex-col gap-2">
+    <EColumnThenRowContainer>
       <ENumberInput id="dollars" label="Amount" prefix="$" value={amount}
       ></ENumberInput>
       <ETextInput id="description" label="Description" value={description}
       ></ETextInput>
       <EDateInput id="date" label="Date" value={date}></EDateInput>
-    </div>
+    </EColumnThenRowContainer>
   </ECard>
   <ECard title="Overflow" subtitle="Some overflow content"></ECard>
   <ECard title="Overflow" subtitle="Some overflow content"></ECard>
   <ECard title="Overflow" subtitle="Some overflow content"></ECard>
   <ECard title="Overflow" subtitle="Some overflow content"></ECard>
   <ECard title="Overflow" subtitle="Some overflow content"></ECard>
-</div>
+</EColumnContainer>

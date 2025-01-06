@@ -13,10 +13,10 @@
 </script>
 
 <!--please note that our main will clip any content that is overflowing in an effort to maintain a decent user experience-->
-<main class="h-screen max-h-screen min-h-screen overflow-clip">
+<main class="h-screen max-h-screen min-h-screen">
   <div
     id="appbar"
-    class="absolute z-30 flex h-14 max-h-14 w-screen flex-row items-center border-b border-neutral-300/50 bg-zinc-100/50 px-4 backdrop-blur-lg dark:border-zinc-700/50 dark:bg-neutral-800/50">
+    class="absolute z-30 flex h-14 max-h-14 w-screen flex-row items-center border-b border-neutral-300/50 bg-zinc-100/50 px-4 backdrop-blur-lg dark:border-zinc-700/50 dark:bg-neutral-800/50 drop-shadow-lg">
   </div>
   <button
     aria-label="App Drawer Toggle"
