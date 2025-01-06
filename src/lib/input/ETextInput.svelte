@@ -23,6 +23,6 @@
     @apply font-mono font-semibold;
     @apply text-neutral-800 dark:text-neutral-300;
     @apply bg-neutral-200 hover:bg-zinc-300 focus:bg-zinc-300;
-    @apply focus:bg-neutral-700 dark:bg-neutral-900 hover:dark:bg-neutral-700;
+    @apply dark:bg-neutral-900 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700;
   }
 </style>

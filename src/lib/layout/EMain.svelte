@@ -6,6 +6,6 @@
   let { children } = $props();
 </script>
 
-<main class="min-h-dvh dark:bg-neutral-900">
+<main class="min-h-dvh h-full dark:bg-neutral-900">
   {@render children?.()}
 </main>
