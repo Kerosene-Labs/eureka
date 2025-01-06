@@ -16,6 +16,12 @@ Inspired by Svelte magic. A free and open source Tailwind based component librar
 - Modern
 - Easy for normal folks
 
+## Images
+![Home page, dark mode](images/home_dark.png "Home Page Example - Dark Mode")
+![Home page, light mode](images/home_light.png "Home Page Example - Light Mode")
+![Modal example, dark mode](images/modal_dark.png "Modal Example - Dark Mode")
+![Navigation System example, dark mode](images/nav_dark.png "Navigation System Example - Dark Mode")
+
 ## Installation
 
 1.Install the package (`npm install @kerosenelabs/eureka`)
