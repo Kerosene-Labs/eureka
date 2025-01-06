@@ -3,8 +3,13 @@
   import { cubicIn, cubicInOut, cubicOut } from "svelte/easing";
   import { fly } from "svelte/transition";
   import { toastQueue, ToastType, type ToastRequest } from "./toastControl.js";
-  export let request: ToastRequest;
-  export let id: number;
+
+  interface Props {
+    request: ToastRequest;
+    id: number;
+  }
+
+  let { request, id }: Props = $props();
 
   onMount(() => {
     setTimeout(() => {
@@ -22,7 +27,7 @@
   out:fly={{ y: 100, duration: 150, delay: 25, easing: cubicIn }}
   title="Dismiss"
   class="pointer-events-auto z-20 max-w-72 rounded-lg border p-4 text-left font-mono text-sm font-bold drop-shadow-2xl backdrop-blur-lg transition-colors"
-  on:click={destroy}
+  onclick={destroy}
   class:error={request.type === ToastType.ERROR}
   class:success={request.type === ToastType.SUCCESS}
   class:info={request.type === ToastType.INFO}>

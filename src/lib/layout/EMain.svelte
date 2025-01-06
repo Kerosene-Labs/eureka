@@ -1,4 +1,6 @@
 <script lang="ts">
+  import EToastQueue from "$lib/toast/EToastQueue.svelte";
+
   interface Props {
     children?: any;
   }
@@ -6,6 +8,7 @@
   let { children } = $props();
 </script>
 
-<main class="min-h-dvh h-full dark:bg-neutral-900">
+<EToastQueue></EToastQueue>
+<main class="h-full min-h-dvh dark:bg-neutral-900">
   {@render children?.()}
 </main>

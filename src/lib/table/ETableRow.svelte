@@ -1,9 +1,13 @@
 <script lang="ts">
-  export let row: string[];
+  interface Props {
+    row: string[];
+    onclick?: any;
+  }
+  let { row, onclick }: Props = $props();
 </script>
 
 <tr
-  on:click
+  {onclick}
   class="border border-stone-300/50 bg-neutral-200 transition-colors hover:bg-neutral-300 active:bg-zinc-400 dark:border-stone-600/50 dark:bg-neutral-700 hover:dark:bg-neutral-600 active:dark:bg-zinc-700">
   {#each row as cell}
     <td
