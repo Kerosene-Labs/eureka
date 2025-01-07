@@ -5,23 +5,26 @@ Inspired by Svelte magic. A free and open source Tailwind based component librar
 ## Table of Contents
 
 - [Eureka](#eureka)
-  - [Table of Contents](#table-of-contents)
-  - [Features](#features)
-  - [Installation](#installation)
-  - [License](#license)
+- [Table of Contents](#table-of-contents)
+- [Features](#features)
+- [Installation](#installation)
+- [License](#license)
 
 ## Features
 
 - Fast and Minimal
 - Modern
 - Easy for normal folks
+- Sane defaults
+- Frotsed glass (who doesn't love that?)
 
 ## Images
+
 [Example Images are here.](https://github.com/Kerosene-Labs/eureka/tree/main/images)
 
 ## Installation
 
-1.Install the package (`npm install @kerosenelabs/eureka`)
+1. Install the package (`npm install @kerosenelabs/eureka`)
 
 2. Add the CSS to your `app.css`
 
