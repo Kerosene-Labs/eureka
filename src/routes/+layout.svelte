@@ -1,32 +1,29 @@
 <script lang="ts">
   import EButton from "$lib/button/EButton.svelte";
   import ECard from "$lib/container/ECard.svelte";
-  import EContentContainer from "$lib/layout/EContentContainer.svelte";
-  import EMain from "$lib/layout/EMain.svelte";
-  import ENav from "$lib/nav/ENav.svelte";
-  import ENavItem from "$lib/nav/ENavItem.svelte";
+  import EColumnThenRowContainer from "$lib/layout/EColumnThenRowContainer.svelte";
+  import ERootPage from "$lib/layout/pagetype/ERootPage.svelte";
+  import ESimpleNavItem from "$lib/nav/ESimpleNavItem.svelte";
+  import type { Snippet } from "svelte";
   import "../app.css";
 
-  let { children } = $props();
+  interface Props {
+    children?: Snippet;
+  }
+  let { children }: Props = $props();
 </script>
 
-<EMain>
-  <ENav>
-    {#snippet items()}
-      <div class="p-4">
-        <ECard title="Hello, User!" subtitle="This is a user card!">
-          <div class="flex flex-col gap-2 desktop:flex-row">
-            <EButton type="secondary">Settings</EButton>
-            <EButton type="primary">Log Out</EButton>
-          </div>
-        </ECard>
-      </div>
-      <ENavItem>Test</ENavItem>
-      <ENavItem>Test 2</ENavItem>
-      <ENavItem>Test 3</ENavItem>
-    {/snippet}
-    <EContentContainer>
-      {@render children?.()}
-    </EContentContainer>
-  </ENav>
-</EMain>
+<ERootPage>
+  {#snippet navItems()}
+    <!-- <div class="p-4">
+      <ECard title="Hello, User!" subtitle="This is a user card!">
+        <div class="flex w-full flex-row gap-2">
+          <EButton type="secondary">Settings</EButton>
+          <EButton type="primary">Log Out</EButton>
+        </div>
+      </ECard>
+    </div>
+    <ESimpleNavItem text="Home" goto="#"></ESimpleNavItem> -->
+  {/snippet}
+  {@render children?.()}
+</ERootPage>

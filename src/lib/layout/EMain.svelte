@@ -9,6 +9,6 @@
 </script>
 
 <EToastQueue></EToastQueue>
-<main class="h-full min-h-dvh dark:bg-neutral-900">
+<main class="min-h-dvh overflow-clip dark:bg-neutral-900">
   {@render children?.()}
 </main>

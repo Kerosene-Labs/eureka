@@ -13,15 +13,15 @@
 </script>
 
 <!--please note that our main will clip any content that is overflowing in an effort to maintain a decent user experience-->
-<main class="h-screen max-h-screen min-h-screen">
+<div id="pageCapsule" class="h-screen max-h-screen min-h-screen">
   <div
     id="appbar"
-    class="absolute z-30 flex h-14 max-h-14 w-screen flex-row items-center border-b border-neutral-300/50 bg-zinc-100/50 px-4 backdrop-blur-lg dark:border-zinc-700/50 dark:bg-neutral-800/50 drop-shadow-lg">
+    class="fixed z-30 flex h-14 max-h-14 flex-row items-center border-b border-neutral-300/50 bg-zinc-100/50 px-4 drop-shadow-lg backdrop-blur-lg dark:border-zinc-700/50 dark:bg-neutral-800/50">
   </div>
   <button
     aria-label="App Drawer Toggle"
     onclick={toggleDrawer}
-    class="absolute z-50 h-14 px-4">
+    class="fixed z-50 h-14 px-4">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
@@ -37,7 +37,7 @@
   </button>
   <div
     id="drawer"
-    class="inset-y-y fixed z-40 h-screen w-[90%] translate-x-[-100%] bg-neutral-200 transition-all lg:w-96 dark:bg-neutral-900"
+    class="inset-y-y fixed z-40 h-screen w-[90%] translate-x-[-100%] bg-neutral-200 shadow-2xl transition-all lg:w-96 dark:bg-neutral-900"
     class:translate-x-[0%]={drawerOpen}
     class:pointer-events-none={!drawerOpen}>
     <div class="flex flex-col pt-14">
@@ -55,4 +55,4 @@
   <div id="pageContent" class="h-full overflow-y-auto pt-14">
     {@render children?.()}
   </div>
-</main>
+</div>

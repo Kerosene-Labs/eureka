@@ -20,7 +20,7 @@
   }: Props = $props();
 </script>
 
-<div class="h-10">
+<div class="h-10 w-full">
   <button
     aria-label="Button"
     {disabled}
@@ -29,7 +29,7 @@
     class:primary={type === "primary"}
     class:secondary={type === "secondary"}
     class:danger={type === "danger"}>
-    <span class="flex flex-row items-center justify-center gap-4">
+    <span class="flex w-full flex-row items-center justify-center gap-4">
       {@render children?.()}
       {#if spinning}
         <span role="status">
@@ -54,7 +54,7 @@
 
 <style lang="postcss">
   button {
-    @apply w-full;
+    @apply flex w-full text-center;
     @apply font-semibold;
     @apply rounded-lg border px-5 py-2;
     @apply transition-all;
@@ -79,7 +79,7 @@
   }
 
   button[disabled] {
-    @apply w-full;
+    @apply flex w-full;
     @apply font-semibold;
     @apply rounded-xl px-5 py-2;
     @apply text-neutral-700;
