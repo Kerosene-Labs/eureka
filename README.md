@@ -17,6 +17,7 @@ Inspired by Svelte magic. A free and open source Tailwind based component librar
 - Easy for normal folks
 - Sane defaults
 - Frotsed glass (who doesn't love that?)
+- Field validation with Yup
 
 ## Images
 

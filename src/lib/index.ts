@@ -13,6 +13,7 @@ export { default as ERootPage } from "$lib/layout/pagetype/ERootPage.svelte";
 export { default as EDateInput } from "$lib/input/EDateInput.svelte";
 export { default as ENumberInput } from "$lib/input/ENumberInput.svelte";
 export { default as ETextInput } from "$lib/input/ETextInput.svelte";
+export { default as EForm } from "$lib/input/EForm.svelte";
 
 // layout
 export { default as EColumnLayout } from "$lib/layout/EColumnLayout.svelte";

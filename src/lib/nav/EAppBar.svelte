@@ -4,7 +4,7 @@
     text?: string;
   }
 
-  let { mode = "primary", text = "Ass" }: Props = $props();
+  let { mode = "primary", text }: Props = $props();
 </script>
 
 <div
@@ -13,9 +13,11 @@
   class:primary={mode === "primary"}
   class:secondary={mode === "secondary"}>
   {#if text}
-    <p class="pl-14 text-lg font-semibold text-neutral-800 dark:text-white">
-      {text}
-    </p>
+    <div class="fixed z-50">
+      <p class="pl-14 text-lg font-semibold text-neutral-800 dark:text-white">
+        {text}
+      </p>
+    </div>
   {/if}
 </div>
 

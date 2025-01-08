@@ -9,11 +9,17 @@
   import EColumnThenRowLayout from "$lib/layout/EColumnThenRowLayout.svelte";
   import ETable from "$lib/table/ETable.svelte";
   import ETableRow from "$lib/table/ETableRow.svelte";
-
+  import * as Yup from "yup";
   let modalVisible: boolean = false;
   let amount: number;
   let description: string;
   let date: Date;
+
+  function descriptionSchema(): Yup.StringSchema {
+    return Yup.string()
+      .required("A description is required")
+      .max(50, "The description must not be more than 50 characters.");
+  }
 </script>
 
 <EModal
@@ -48,12 +54,17 @@
         }}>Big Red Button</EButton>
     </EColumnThenRowLayout>
   </ECard>
-  <ECard title="Inputs" subtitle="Here's some inputs!">
+  <ECard
+    title="Inputs"
+    subtitle="Here's some inputs! They're even validated with Yup.">
     <EColumnThenRowLayout>
       <ENumberInput id="dollars" label="Amount" prefix="$" value={amount}
       ></ENumberInput>
-      <ETextInput id="description" label="Description" value={description}
-      ></ETextInput>
+      <ETextInput
+        id="description"
+        label="Description"
+        value={description}
+        schema={descriptionSchema()}></ETextInput>
       <EDateInput id="date" label="Date" value={date}></EDateInput>
     </EColumnThenRowLayout>
   </ECard>
