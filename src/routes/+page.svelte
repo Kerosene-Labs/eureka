@@ -4,9 +4,11 @@
   import EModal from "$lib/container/EModal.svelte";
   import { addToToastQueue, ToastType } from "$lib/index.js";
   import EDateInput from "$lib/input/EDateInput.svelte";
+  import EForm from "$lib/input/EForm.svelte";
   import ENumberInput from "$lib/input/ENumberInput.svelte";
   import ETextInput from "$lib/input/ETextInput.svelte";
   import EColumnThenRowLayout from "$lib/layout/EColumnThenRowLayout.svelte";
+  import { testFormState } from "$lib/state.js";
   import ETable from "$lib/table/ETable.svelte";
   import ETableRow from "$lib/table/ETableRow.svelte";
   import * as Yup from "yup";
@@ -58,14 +60,16 @@
     title="Inputs"
     subtitle="Here's some inputs! They're even validated with Yup.">
     <EColumnThenRowLayout>
-      <ENumberInput id="dollars" label="Amount" prefix="$" value={amount}
-      ></ENumberInput>
-      <ETextInput
-        id="description"
-        label="Description"
-        value={description}
-        schema={descriptionSchema()}></ETextInput>
-      <EDateInput id="date" label="Date" value={date}></EDateInput>
+      <EForm messageStore={testFormState}>
+        <ENumberInput id="dollars" label="Amount" prefix="$" value={amount}
+        ></ENumberInput>
+        <ETextInput
+          id="description"
+          label="Description"
+          value={description}
+          schema={descriptionSchema()}></ETextInput>
+        <EDateInput id="date" label="Date" value={date}></EDateInput>
+      </EForm>
     </EColumnThenRowLayout>
   </ECard>
   <ECard title="Tables" subtitle="What else are we going to eat on, the floor?">

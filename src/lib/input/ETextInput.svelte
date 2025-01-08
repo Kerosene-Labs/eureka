@@ -7,9 +7,18 @@
     label: string;
     value: string;
     required?: boolean;
-    schema?: StringSchema;
+    schema: StringSchema;
+    onValidate: (args: string) => void;
   }
-  let { id, label, value = $bindable(), required, schema }: Props = $props();
+
+  let {
+    id,
+    label,
+    value = $bindable(),
+    required,
+    schema,
+    onValidate,
+  }: Props = $props();
 
   // internal state
   let touched: Writable<boolean> = writable(false);
@@ -28,15 +37,15 @@
       valid.update(() => true);
       return;
     }
-
-    if (schema) {
-      try {
-        schema.validateSync(value);
+    schema
+      .validate(value)
+      .then((response) => {
         valid.update(() => true);
-      } catch (err) {
+      })
+      .catch((error) => {
         valid.update(() => false);
-      }
-    }
+        onValidate(error);
+      });
   });
 </script>
 
@@ -44,7 +53,7 @@
   <div class="flex flex-row">
     <label class="text-sm font-semibold uppercase text-neutral-600" for={id}
       >{label}</label>
-    {#if schema?.describe().tests?.some((test) => test.name === "required")}
+    {#if schema.describe().tests?.some((test) => test.name === "required")}
       <span class="min-h-min pl-1 text-red-600">*</span>
     {/if}
   </div>

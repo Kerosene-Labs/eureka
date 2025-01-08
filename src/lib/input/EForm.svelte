@@ -1,16 +1,25 @@
 <script lang="ts">
   import type { Snippet } from "svelte";
+  import type { Writable } from "svelte/store";
   import * as Yup from "yup";
 
   interface Props {
-    id: string;
+    messageStore: Writable<string[]>;
     schema?: Yup.ObjectSchema<Yup.AnyObject>;
     children?: Snippet;
   }
 
-  let { id, schema, children }: Props = $props();
+  let { messageStore, schema, children }: Props = $props();
 </script>
 
-<form {id}>
+{#if $messageStore.length > 0}
+  <div class="border border-red-500 p-2">
+    {#each $messageStore as message}
+      <p>{message}</p>
+    {/each}
+  </div>
+{/if}
+
+<form>
   {@render children?.()}
 </form>
