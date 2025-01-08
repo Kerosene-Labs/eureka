@@ -1,20 +1,23 @@
 <script lang="ts">
+  import { EToastQueue } from "$lib/index.js";
   import ENav from "$lib/nav/ENav.svelte";
   import EContentContainer from "../EContentContainer.svelte";
-  import EMain from "../EMain.svelte";
 
   interface Props {
     navItems?: any;
     children?: any;
   }
-  let { navItems, children } = $props();
+  let { navItems, children }: Props = $props();
 </script>
 
-<EMain>
-  <ENav>
-    {#snippet items()}
-      {@render navItems?.()}
-    {/snippet}
-  </ENav>
-  <EContentContainer></EContentContainer>
-</EMain>
+<EToastQueue></EToastQueue>
+<ENav>
+  {#snippet items()}
+    {@render navItems?.()}
+  {/snippet}
+  <EContentContainer>
+    <div class="p-4">
+      {@render children?.()}
+    </div>
+  </EContentContainer>
+</ENav>

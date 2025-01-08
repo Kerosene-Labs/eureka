@@ -15,7 +15,7 @@
 
 <ERootPage>
   {#snippet navItems()}
-    <!-- <div class="p-4">
+    <div class="p-4">
       <ECard title="Hello, User!" subtitle="This is a user card!">
         <div class="flex w-full flex-row gap-2">
           <EButton type="secondary">Settings</EButton>
@@ -23,7 +23,7 @@
         </div>
       </ECard>
     </div>
-    <ESimpleNavItem text="Home" goto="#"></ESimpleNavItem> -->
+    <ESimpleNavItem text="Home" goto="#"></ESimpleNavItem>
   {/snippet}
   {@render children?.()}
 </ERootPage>

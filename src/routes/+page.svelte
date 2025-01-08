@@ -23,7 +23,7 @@
   subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempus id elit id vestibulum. Aliquam."
 ></EModal>
 
-<EColumnContainer>
+<div class="flex flex-col gap-4">
   <ECard
     title="Welcome"
     subtitle="Welcome to Eureka, a free and open source Svelte 5 component library.">
@@ -69,4 +69,4 @@
   <ECard title="Overflow" subtitle="Some overflow content"></ECard>
   <ECard title="Overflow" subtitle="Some overflow content"></ECard>
   <ECard title="Overflow" subtitle="Some overflow content"></ECard>
-</EColumnContainer>
+</div>
