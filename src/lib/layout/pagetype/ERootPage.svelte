@@ -1,7 +1,6 @@
 <script lang="ts">
   import { EToastQueue } from "$lib/index.js";
   import ENav from "$lib/nav/ENav.svelte";
-  import EContentContainer from "../EContentContainer.svelte";
 
   interface Props {
     navItems?: any;
@@ -15,9 +14,9 @@
   {#snippet items()}
     {@render navItems?.()}
   {/snippet}
-  <EContentContainer>
-    <div class="p-4">
+  <div class="flex w-full justify-center p-4">
+    <div class="w-full desktop:w-comfy">
       {@render children?.()}
     </div>
-  </EContentContainer>
+  </div>
 </ENav>

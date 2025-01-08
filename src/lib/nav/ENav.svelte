@@ -1,11 +1,19 @@
 <script lang="ts">
+  import EAppBar from "./EAppBar.svelte";
+
   interface Props {
     drawerOpen?: boolean;
+    backButton: boolean;
     items?: any;
     children?: any;
   }
 
-  let { drawerOpen = false, children, items }: Props = $props();
+  let {
+    drawerOpen = false,
+    backButton = false,
+    children,
+    items,
+  }: Props = $props();
 
   function toggleDrawer() {
     drawerOpen = !drawerOpen;
@@ -13,10 +21,7 @@
 </script>
 
 <!--please note that our main will clip any content that is overflowing in an effort to maintain a decent user experience-->
-<div
-  id="appbar"
-  class="fixed z-30 flex h-14 max-h-14 w-screen flex-row items-center border-b border-neutral-300/50 bg-zinc-100/50 px-4 drop-shadow-lg backdrop-blur-lg dark:border-zinc-700/50 dark:bg-neutral-800/50">
-</div>
+<EAppBar mode={backButton ? "secondary" : "primary"}></EAppBar>
 <button
   aria-label="App Drawer Toggle"
   onclick={toggleDrawer}

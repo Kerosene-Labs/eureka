@@ -5,15 +5,22 @@ export { default as EButton } from "$lib/button/EButton.svelte";
 export { default as ECard } from "$lib/container/ECard.svelte";
 export { default as EModal } from "$lib/container/EModal.svelte";
 
+// pagetypes
+export { default as EBranchPage } from "$lib/layout/pagetype/EBranchPage.svelte";
+export { default as ERootPage } from "$lib/layout/pagetype/ERootPage.svelte";
+
 // inputs
 export { default as EDateInput } from "$lib/input/EDateInput.svelte";
 export { default as ENumberInput } from "$lib/input/ENumberInput.svelte";
 export { default as ETextInput } from "$lib/input/ETextInput.svelte";
 
 // layout
+export { default as EColumnLayout } from "$lib/layout/EColumnLayout.svelte";
+export { default as EColumnThenRowLayout } from "$lib/layout/EColumnThenRowLayout.svelte";
 export { default as EHorizontalSeparator } from "$lib/layout/EHorizontalSeparator.svelte";
+export { default as ERowLayout } from "$lib/layout/ERowLayout.svelte";
 
-// table
+// tables
 export { default as ETable } from "$lib/table/ETable.svelte";
 export { default as ETableRow } from "$lib/table/ETableRow.svelte";
 
