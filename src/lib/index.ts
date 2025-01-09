@@ -47,3 +47,5 @@ export { default as EP } from "$lib/text/EP.svelte";
 
 // nav
 export { default as ENav } from "$lib/nav/ENav.svelte";
+export { default as ENAvItem } from "$lib/nav/ENavItem.svelte";
+export { default as ESimpleNavItem } from "$lib/nav/ESimpleNavItem.svelte";
