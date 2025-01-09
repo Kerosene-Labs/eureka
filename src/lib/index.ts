@@ -1,3 +1,5 @@
+import { drawerOpenStore } from "./state.js";
+
 // buttons
 export { default as EButton } from "$lib/button/EButton.svelte";
 
@@ -49,3 +51,4 @@ export { default as EP } from "$lib/text/EP.svelte";
 export { default as ENav } from "$lib/nav/ENav.svelte";
 export { default as ENavItem } from "$lib/nav/ENavItem.svelte";
 export { default as ESimpleNavItem } from "$lib/nav/ESimpleNavItem.svelte";
+export { drawerOpenStore } from "$lib/state.js";
