@@ -17,7 +17,7 @@
 <EAppBarHamburger></EAppBarHamburger>
 <div
   id="drawer"
-  class="inset-y-y fixed z-40 h-screen w-[90%] translate-x-[-100%] bg-neutral-200 shadow-2xl transition-all lg:w-96 dark:bg-neutral-900"
+  class="inset-y-y fixed z-40 h-screen w-[90%] translate-x-[-100%] bg-neutral-200 shadow-lg transition-all lg:w-96 dark:bg-neutral-900"
   class:translate-x-[0%]={$drawerOpenStore}
   class:pointer-events-none={!$drawerOpenStore}>
   <div class="flex flex-col pt-14">
