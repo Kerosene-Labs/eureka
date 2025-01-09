@@ -4,7 +4,7 @@
   import * as Yup from "yup";
 
   interface Props {
-    messageStore: Writable<string[]>;
+    messageStore: Writable<object>;
     schema?: Yup.ObjectSchema<Yup.AnyObject>;
     children?: Snippet;
   }

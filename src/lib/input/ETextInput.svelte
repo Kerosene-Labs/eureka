@@ -8,7 +8,7 @@
     value: string;
     required?: boolean;
     schema: StringSchema;
-    onValidate: (args: string) => void;
+    messageStore: Writable<object>;
   }
 
   let {
@@ -17,7 +17,7 @@
     value = $bindable(),
     required,
     schema,
-    onValidate,
+    messageStore,
   }: Props = $props();
 
   // internal state
@@ -41,10 +41,11 @@
       .validate(value)
       .then((response) => {
         valid.update(() => true);
+        messageStore.update((prev) => ({ ...prev, [id]: null }));
       })
       .catch((error) => {
         valid.update(() => false);
-        onValidate(error);
+        messageStore.update((prev) => ({ ...prev, [id]: error }));
       });
   });
 </script>
